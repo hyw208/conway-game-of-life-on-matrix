@@ -131,7 +131,14 @@ void next_gen()
         }
       }
       
-      // based on neighbor count, decide to live or die
+      /*
+        based on neighbor count, decide to live or die: simple rules copied off web: 
+        
+        any live cell with fewer than two live neighbors dies, as if caused by loneliness.
+        any live cell with more than three live neighbors dies, as if by overcrowding.
+        any live cell with two or three live neighbors, lives on to the next generation.
+        any dead cell with exactly three live neighbors becomes a live cell.
+      */
       int cell = matrix[row][col];      
       if (cell == 1) // live cell
       {
