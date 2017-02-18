@@ -89,8 +89,8 @@ void chance()
   }
 }
 
-// seed the matrix inital states 
-void some_pattern()
+// seed the matrix inital states, some glider pattern found on web 
+void glider()
 {
   for (int row=0; row<8; row++) 
   {
@@ -173,7 +173,7 @@ void setup()
   }
   
   // setup initial pattern for matrix
-  some_pattern();
+  glider();
   
   // dim entire matrix
   dim();
