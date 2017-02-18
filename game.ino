@@ -53,7 +53,7 @@ void render()
     for (int col=0; col<8; col++) 
     {
       int led = matrix[row][col];
-      // when the row is HIGH and the col is LOW, the LED where they meet turns on
+      // for cell(i, j) to light up, keep row i HIGH and column j LOW
       digitalWrite(cols[col], led == 1 ? LOW : HIGH);
       if (led == 1) 
       {
@@ -89,8 +89,8 @@ void chance()
   }
 }
 
-// seed the matrix inital states to result in glider for conway game of live
-void glider()
+// seed the matrix inital states 
+void some_pattern()
 {
   for (int row=0; row<8; row++) 
   {
@@ -173,7 +173,7 @@ void setup()
   }
   
   // setup initial pattern for matrix
-  glider();
+  some_pattern();
   
   // dim entire matrix
   dim();
