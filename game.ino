@@ -89,8 +89,8 @@ void chance()
   }
 }
 
-// seed the matrix inital states, some glider pattern found on web 
-void glider()
+// seed the matrix inital states, some glider pattern found on web, but I think it should be called oscillator
+void oscillator()
 {
   for (int row=0; row<8; row++) 
   {
@@ -180,7 +180,7 @@ void setup()
   }
   
   // setup initial pattern for matrix
-  glider();
+  oscillator();
   
   // dim entire matrix
   dim();
